@@ -20,6 +20,7 @@
     "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/devcontainers/features/node:1": {},
     "ghcr.io/devcontainers/features/python:1": {
+      // We specify the version because the default behaviour is to use version of host machine which is meh
       "version": "3.12"
     },
     "ghcr.io/devcontainers-contrib/features/poetry:2": {},

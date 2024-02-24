@@ -3,8 +3,9 @@ name: "Devcontainer CI/CD"
 on:
   push:
     branches: ["main", "NONE/setup-dev-containers"]
-    # paths:
-    #   - .devcontainer/Dockerfile
+    paths:
+      - cfc-devenv-base/**
+      - .github/workflows/devcontainers.yml
 
 env:
   REGISTRY: ghcr.io
@@ -13,7 +14,7 @@ env:
 jobs:
   # Build and push Docker image with Buildx (don't push on PR)
   # https://github.com/docker/build-push-action
-  Build-Devcontainer:
+  base-setup:
     # Permission for pushing to ghcr
     permissions:
       contents: read
@@ -58,7 +59,30 @@ jobs:
           file: ${{ github.workspace}}/cfc-devenv-base/Dockerfile
           platforms: linux/amd64,linux/arm64
 
+  arm64-setup:
+    needs: base-setup
+    permissions:
+      contents: read
+      packages: write
+
+    runs-on: ubuntu-latest
+    steps:
       - name: Build and push Devcontainer image
         run: |
           npm install -g @devcontainers/cli
-          devcontainer build --config cfc-devenv-base/devcontainer.json --workspace-folder . --push true --image-name ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} --platform linux/amd64,linux/arm64
+          export DOCKER_BUILDKIT=1
+          devcontainer build --config cfc-devenv-base/devcontainer.json --workspace-folder . --push true --image-name ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} --platform linux/arm64
+  
+  amd64-setup:
+    needs: base-setup
+    permissions:
+      contents: read
+      packages: write
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build and push Devcontainer image
+        run: |
+          npm install -g @devcontainers/cli
+          export DOCKER_BUILDKIT=1
+          devcontainer build --config cfc-devenv-base/devcontainer.json --workspace-folder . --push true --image-name ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} --platform linux/amd64
