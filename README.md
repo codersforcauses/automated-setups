@@ -47,3 +47,8 @@ Less setup = Less pain = More time to make features = More impact = Happy develo
 #### What makes this different from running docker containers locally?
 
 Devcontainer is a way to automate tooling setup including vscode extensions, zsh plugins. You may still need to run docker containers locally, such as running a local database. It is even recommended to use still setup your backend in Docker because you will reuse that in production environments/
+
+#### Registry-based Caching
+I didn't realise that devcontainer to build for arm64 and amd64 takes like 40 minutes. So I had to implement registry-based caching by downloading the layers first in the registry before building. Read more here https://docs.docker.com/build/ci/github-actions/cache/#registry-cache if you want to learn about it.
+
+tldr; I just referenced the cache in the `.devcontainer` folder so it downloads it before building.
