@@ -5,7 +5,7 @@
   "build": {
     "dockerfile": "Dockerfile",
     "cacheFrom": [
-      "type=registry,ref=ghcr.io/codersforcauses/cfc-devenv-base:main",
+      "type=registry,ref=ghcr.io/codersforcauses/cfc-devenv-base:latest",
       "type=local,src=./docker-cache"
     ]
   },
