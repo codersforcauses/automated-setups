@@ -5,7 +5,7 @@
   "build": {
     "dockerfile": "Dockerfile",
     "cacheFrom": [
-        "type=registry,ref=ghcr.io/codersforcauses/automatic-setups:main",
+        "type=registry,ref=ghcr.io/codersforcauses/automated-setups:main",
         "type=local,src=../docker-cache"
     ]
   },
