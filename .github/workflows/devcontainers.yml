@@ -3,8 +3,8 @@ name: "Devcontainer CI/CD"
 on:
   push:
     branches: ["main", "NONE/setup-dev-containers"]
-    paths:
-      - .devcontainer/Dockerfile
+    # paths:
+    #   - .devcontainer/Dockerfile
 
 jobs:
   # Build and push Docker image with Buildx (don't push on PR)
@@ -18,7 +18,7 @@ jobs:
         with:
           context: ${{ github.workspace}}/.devcontainer/
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: latest
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=registry,ref=ghcr.io/codersforcauses/automatic-setups:main
           cache-to: type=inline
