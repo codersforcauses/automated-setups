@@ -21,6 +21,16 @@ We are able to automate the setup of tooling. By default these are what we insta
 - Vscode CLI + Server
 - Zsh Plugins
 
+### Using this
+
+To use this, do the following:
+
+1. Ensure the `.devcontainer/devcontainer.json` is in your project
+2. On the bottom left of your vscode, click the green button that has an icon that looks like this "><"
+3. Select "Reopen in Container".
+
+or just open the command palette and type "Reopen in Container".
+
 ### Setups
 
 There's a folder called `cfc-devenv-base` that defines the base image for development environment. We prebuild this image in the CI (github actions), the reason why we do this is so that the developer environment just gets downloaded rather than built in the developer machine.
