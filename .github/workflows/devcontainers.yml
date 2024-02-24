@@ -12,6 +12,8 @@ jobs:
   Build-Devcontainer:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Build and push Docker image
         id: build-and-push
         uses: docker/build-push-action@v3
