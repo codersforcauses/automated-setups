@@ -71,7 +71,6 @@
         "formulahendry.auto-rename-tag"
       ],
       "settings": {
-        "editor.tabSize": 4,
         "terminal.integrated.defaultProfile.linux": "zsh",
         "terminal.integrated.profiles.linux": {
           "bash": {
