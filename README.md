@@ -42,3 +42,8 @@ There's a folder called `.devcontainer` that defines the development environment
 In a CFC project, you will have roughly around 50 developers machine to setup. There will be a lot of inconsistency in the environment such as the 3 operating systems we support (Windows, Mac, Linux). By automating the setup, we are able to ensure that the environment is consistent across all developers, but not only that, we are able to provide a taste of the an amazing tooling for beginner developers.
 
 Less setup = Less pain = More time to make features = More impact = Happy developers
+
+
+#### What makes this different from running docker containers locally?
+
+Devcontainer is a way to automate tooling setup including vscode extensions, zsh plugins. You may still need to run docker containers locally, such as running a local database. It is even recommended to use still setup your backend in Docker because you will reuse that in production environments/
