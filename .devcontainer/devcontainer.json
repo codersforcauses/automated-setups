@@ -58,7 +58,8 @@
         "timonwong.shellcheck",
         "robertz.code-snapshot",
         "esbenp.prettier-vscode",
-        "ms-vscode.vscode-typescript-next"
+        "ms-vscode.vscode-typescript-next",
+        "ms-python.black-formatter"
       ],
       "settings": {
         "editor.tabSize": 4,
