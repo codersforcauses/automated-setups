@@ -17,5 +17,7 @@ RUN apt-get update \
 RUN mkdir -p /opt/utils
 COPY ./utils /opt/utils
 
+RUN echo "/opt/utils/env_var_declarations.sh" >> "/home/${USERNAME}/.zshrc"
+
 # Add a display script for every terminal run
 RUN echo "/opt/utils/startup_display.sh" >> "/home/${USERNAME}/.zshrc"
