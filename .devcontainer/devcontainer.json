@@ -1,12 +1,12 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/docker-outside-of-docker
 {
-  "name": "Coders for Causes Automatic Setup",
+  "name": "CFC - Devenv",
   "build": {
     "dockerfile": "Dockerfile",
     "cacheFrom": [
-        "type=registry,ref=ghcr.io/codersforcauses/automated-setups:main",
-        "type=local,src=../docker-cache"
+      "type=registry,ref=ghcr.io/codersforcauses/automated-setups:main",
+      "type=local,src=../docker-cache"
     ]
   },
 
@@ -39,7 +39,7 @@
   "forwardPorts": [3000, 8080],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "figlet 'CFC - AutoSetup'",
+  "postCreateCommand": "figlet 'CFC - Devenv'",
 
   // Configure tool-specific properties.
   // "customizations": {},
