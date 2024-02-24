@@ -5,7 +5,7 @@
   "build": {
     "dockerfile": "Dockerfile",
     "cacheFrom": [
-      "type=registry,ref=ghcr.io/codersforcauses/cfc-devenv-base:latest",
+      "type=registry,ref=ghcr.io/codersforcauses/cfc-devenv:latest",
       "type=local,src=./docker-cache"
     ]
   },
@@ -29,7 +29,7 @@
     "ghcr.io/devcontainers-community/npm-features/typescript:1": {}
   },
 
-  "mounts":[
+  "mounts": [
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
     "source=devcontainer-bashhistory,target=/commandhistory,type=volume"
   ],
