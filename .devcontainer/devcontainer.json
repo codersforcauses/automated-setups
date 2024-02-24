@@ -24,7 +24,7 @@
     "ghcr.io/devcontainers-contrib/features/vscode-cli:1": {},
     "ghcr.io/devcontainers-contrib/features/vscode-server:1": {},
     "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
-      "plugins": "git zsh-autosuggestions zsh-syntax-highlighting you-should-use zsh-bat",
+      "plugins": "git docker zsh-autosuggestions zsh-syntax-highlighting zsh-you-should-use zsh-bat",
       "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions https://github.com/zsh-users/zsh-syntax-highlighting https://github.com/MichaelAquilina/zsh-you-should-use.git https://github.com/fdellwing/zsh-bat.git"
     },
     "ghcr.io/devcontainers-community/npm-features/typescript:1": {}
