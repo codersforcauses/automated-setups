@@ -1,0 +1,5 @@
+# This is to prevent CRLF to be used in the repository for all files
+# except for the ones that are known to require CRLF (like .bat and .cmd)
+* text=auto eol=lf
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf
