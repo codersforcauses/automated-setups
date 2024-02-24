@@ -1,3 +1,34 @@
 # Automated Setup
 
 This is the repository that contains the automated development environment setup for Coders For Causes project including some of the base images.
+
+## CFC-Devenv
+
+CFC-Devenv, also known as "Coders for Causes - Developer Environment" is the automated development environment setup for Coders For Causes developer machine.
+
+With only having 2 prerequisite:
+
+- Vscode
+- Docker
+
+We are able to automate the setup of tooling. By default these are what we install:
+
+- Git
+- Github CLI
+- Node (npm, yarn, nvm, pnpm, typescript)
+- Python (black, poetry)
+- Sane Vscode extensions
+- Vscode CLI + Server
+- Zsh Plugins
+
+### Setups
+
+There's a folder called `cfc-devenv-base` that defines the base image for development environment. We prebuild this image in the CI (github actions), the reason why we do this is so that the developer environment just gets downloaded rather than built in the developer machine.
+
+There's a folder called `.devcontainer` that defines the development environment setup. You will want to copy this folder into your project which allows developers to pull the development environment setup from the base image. Notice that the image it references is `cfc-devenv-base` which is the prebuilt image.
+
+### The reason why we do this
+
+In a CFC project, you will have roughly around 50 developers machine to setup. There will be a lot of inconsistency in the environment such as the 3 operating systems we support (Windows, Mac, Linux). By automating the setup, we are able to ensure that the environment is consistent across all developers, but not only that, we are able to provide a taste of the an amazing tooling for beginner developers.
+
+Less setup = Less pain = More time to make features = More impact = Happy developers
