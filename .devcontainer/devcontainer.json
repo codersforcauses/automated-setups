@@ -1,34 +1,10 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/docker-outside-of-docker
 {
-  "name": "Coders for Causes Automatic Setup",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "cacheFrom": [
-        "type=registry,ref=ghcr.io/codersforcauses/automatic-setups:main",
-        "type=local,src=../docker-cache"
-    ]
-  },
+  "name": "CFC - Devenv",
+  "image": "ghcr.io/codersforcauses/cfc-devenv:latest",
 
-  "features": {
-    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
-      "version": "latest",
-      "enableNonRootDocker": "true",
-      "moby": "true"
-    },
-    "ghcr.io/devcontainers/features/git:1": {},
-    "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/devcontainers/features/node:1": {},
-    "ghcr.io/devcontainers/features/python:1": {},
-    "ghcr.io/devcontainers-contrib/features/poetry:2": {},
-    "ghcr.io/devcontainers-contrib/features/vscode-cli:1": {},
-    "ghcr.io/devcontainers-contrib/features/vscode-server:1": {},
-    "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
-      "plugins": "git docker zsh-autosuggestions zsh-syntax-highlighting zsh-you-should-use zsh-bat",
-      "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions https://github.com/zsh-users/zsh-syntax-highlighting https://github.com/MichaelAquilina/zsh-you-should-use.git https://github.com/fdellwing/zsh-bat.git"
-    },
-    "ghcr.io/devcontainers-community/npm-features/typescript:1": {}
-  },
+  "features": {},
 
   // Use this environment variable if you need to bind mount your local source code into a new container.
   "remoteEnv": {
@@ -36,64 +12,9 @@
   },
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  "forwardPorts": [3000, 8080],
+  "forwardPorts": [3000, 8000, 8080]
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "figlet 'CFC - AutoSetup'",
-
-  // Configure tool-specific properties.
-  // "customizations": {},
-
-  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-  // "remoteUser": "root"
-
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "mhutchie.git-graph",
-        "eamodio.gitlens",
-        "ms-azuretools.vscode-docker",
-        "github.vscode-github-actions",
-        "johnpapa.vscode-peacock",
-        "timonwong.shellcheck",
-        "robertz.code-snapshot",
-        "esbenp.prettier-vscode",
-        "ms-vscode.vscode-typescript-next",
-        "ms-python.black-formatter",
-        "Vue.volar",
-        "dsznajder.es7-react-js-snippets",
-        "usernamehw.errorlens",
-        "vscode-icons-team.vscode-icons",
-        "batisteo.vscode-django",
-        "ms-python.isort",
-        "ms-vsliveshare.vsliveshare",
-        "quicktype.quicktype",
-        "formulahendry.auto-rename-tag"
-      ],
-      "settings": {
-        "editor.tabSize": 4,
-        "terminal.integrated.defaultProfile.linux": "zsh",
-        "terminal.integrated.profiles.linux": {
-          "bash": {
-            "path": "bash",
-            "icon": "terminal-bash"
-          },
-          "zsh": {
-            "path": "zsh"
-          },
-          "fish": {
-            "path": "fish"
-          },
-          "tmux": {
-            "path": "tmux",
-            "icon": "terminal-tmux"
-          },
-          "pwsh": {
-            "path": "pwsh",
-            "icon": "terminal-powershell"
-          }
-        }
-      }
-    }
-  }
+  // Note: Useful for when they open it and want everything to just start
+  // "postCreateCommand": "docker compose up -d && yarn dev"
 }
