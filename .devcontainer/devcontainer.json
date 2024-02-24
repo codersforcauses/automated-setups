@@ -3,11 +3,11 @@
 {
   "name": "Coders for Causes Automatic Setup",
   "build": {
-    "dockerfile": "Dockerfile"
-    // "cacheFrom": [
-    //     "type=registry,ref=ghcr.io/codersforcauses/automatic-setups:main",
-    //     "type=local,src=../docker-cache"
-    // ]
+    "dockerfile": "Dockerfile",
+    "cacheFrom": [
+        "type=registry,ref=ghcr.io/codersforcauses/automatic-setups:main",
+        "type=local,src=../docker-cache"
+    ]
   },
 
   "features": {
