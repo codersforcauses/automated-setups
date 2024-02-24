@@ -11,11 +11,7 @@
   },
 
   "features": {
-    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
-      "version": "latest",
-      "enableNonRootDocker": "true",
-      "moby": "true"
-    },
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/devcontainers/features/node:1": {},
@@ -32,6 +28,11 @@
     },
     "ghcr.io/devcontainers-community/npm-features/typescript:1": {}
   },
+
+  "mounts":[
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+    "source=devcontainer-bashhistory,target=/commandhistory,type=volume"
+  ],
 
   // Use this environment variable if you need to bind mount your local source code into a new container.
   "remoteEnv": {
