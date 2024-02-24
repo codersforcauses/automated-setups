@@ -59,7 +59,16 @@
         "robertz.code-snapshot",
         "esbenp.prettier-vscode",
         "ms-vscode.vscode-typescript-next",
-        "ms-python.black-formatter"
+        "ms-python.black-formatter",
+        "Vue.volar",
+        "dsznajder.es7-react-js-snippets",
+        "usernamehw.errorlens",
+        "vscode-icons-team.vscode-icons",
+        "batisteo.vscode-django",
+        "ms-python.isort",
+        "ms-vsliveshare.vsliveshare",
+        "quicktype.quicktype",
+        "formulahendry.auto-rename-tag"
       ],
       "settings": {
         "editor.tabSize": 4,
