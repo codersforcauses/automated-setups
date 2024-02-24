@@ -19,7 +19,9 @@
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/devcontainers/features/node:1": {},
-    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.12"
+    },
     "ghcr.io/devcontainers-contrib/features/poetry:2": {},
     "ghcr.io/devcontainers-contrib/features/vscode-cli:1": {},
     "ghcr.io/devcontainers-contrib/features/vscode-server:1": {},
