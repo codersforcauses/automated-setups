@@ -2,7 +2,7 @@ name: "Devcontainer CI/CD"
 
 on:
   push:
-    branches: ["main", "NONE/setup-dev-containers"]
+    branches: ["main", "FEAT/github-cache"]
     paths:
       - cfc-devenv-base/**
       - .github/workflows/devcontainers.yml
@@ -54,8 +54,8 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=registry,ref=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-base:main
-          cache-to: type=inline
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
           file: ${{ github.workspace}}/cfc-devenv-base/.devcontainer/Dockerfile
           platforms: linux/amd64,linux/arm64
 
