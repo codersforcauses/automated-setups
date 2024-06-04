@@ -74,7 +74,8 @@
         "ms-python.isort",
         "ms-vsliveshare.vsliveshare",
         "quicktype.quicktype",
-        "formulahendry.auto-rename-tag"
+        "formulahendry.auto-rename-tag",
+        "bradlc.vscode-tailwindcss"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh",
