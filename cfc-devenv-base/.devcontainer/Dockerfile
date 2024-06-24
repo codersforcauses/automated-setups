@@ -21,3 +21,6 @@ RUN cat "/opt/utils/.zshrc" >> "/home/${USERNAME}/.zshrc"
 
 # Add a display script for every terminal run
 RUN echo "/opt/utils/startup_display.sh" >> "/home/${USERNAME}/.zshrc"
+
+# Add /opt/utils to the PATH
+RUN echo "export PATH=\$PATH:/opt/utils" >> "/home/${USERNAME}/.zshrc"
