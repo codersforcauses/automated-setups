@@ -2,6 +2,13 @@
 
 set -euxo pipefail
 
+# Make sure gh is setup
+# gh auth status returns 0 if the user is logged in and 1 if the user is not logged in
+if ! gh auth status; then
+    echo "Please login to GitHub using gh auth login"
+    gh auth login -p ssh -w
+fi
+
 # This script is used to do a quick change
 # Usage: qc.sh "Issue number" "Description"
 
