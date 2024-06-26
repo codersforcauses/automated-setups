@@ -64,7 +64,6 @@
         "timonwong.shellcheck",
         "robertz.code-snapshot",
         "esbenp.prettier-vscode",
-        "ms-vscode.vscode-typescript-next",
         "ms-python.flake8",
         "ms-python.black-formatter",
         "ms-python.isort",
@@ -82,7 +81,8 @@
         "tamasfe.even-better-toml",
         "csstools.postcss",
         "YoavBls.pretty-ts-errors",
-        "meganrogge.template-string-converter"
+        "meganrogge.template-string-converter",
+        "yoavbls.pretty-ts-errors"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh",
