@@ -78,7 +78,8 @@
         "csstools.postcss",
         "YoavBls.pretty-ts-errors",
         "meganrogge.template-string-converter",
-        "yoavbls.pretty-ts-errors"
+        "yoavbls.pretty-ts-errors",
+        "cweijan.vscode-database-client2"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh",
