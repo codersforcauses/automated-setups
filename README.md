@@ -4,6 +4,8 @@ This is the repository that contains the automated development environment setup
 
 ## CFC-Devenv
 
+[![Open in Remote - Containers](https://img.shields.io/static/v1?label=Remote%20-%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/codersforcauses/automated-setup)
+
 CFC-Devenv, also known as "Coders for Causes - Developer Environment" is the automated development environment setup for Coders For Causes developer machine.
 
 With only having 2 prerequisite:
@@ -30,6 +32,11 @@ To use this, do the following:
 3. Select "Reopen in Container".
 
 or just open the command palette and type "Reopen in Container".
+
+Example of how we use this:
+
+- see [django-nextjs-template](https://github.com/codersforcauses/django-nextjs-template).
+- see [django-workshop](https://github.com/CodersforLearning/django-workshop-winter-2024)
 
 ### Setups
 
