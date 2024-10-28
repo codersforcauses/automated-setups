@@ -20,5 +20,5 @@
   // Note: Useful for when they open it and want everything to just start
   // "postCreateCommand": "docker compose up -d && yarn dev"
 
-  "onCreateCommand": "git config --global --add safe.directory ."
+  "onCreateCommand": "git config --global --add safe.directory /workspaces/* || git config --global --add safe.directory /workspace/* || true"
 }
