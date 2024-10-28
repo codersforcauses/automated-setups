@@ -79,7 +79,10 @@
         "YoavBls.pretty-ts-errors",
         "meganrogge.template-string-converter",
         "yoavbls.pretty-ts-errors",
-        "cweijan.vscode-database-client2"
+        "cweijan.vscode-database-client2",
+        // For debuggers
+        "ms-vscode.js-debug",
+        "ms-python.debugpy"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh",
