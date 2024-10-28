@@ -31,6 +31,11 @@ To use this, do the following:
 
 or just open the command palette and type "Reopen in Container".
 
+Example of how we use this:
+
+- see [django-nextjs-template](https://github.com/codersforcauses/django-nextjs-template).
+- see [django-workshop](https://github.com/CodersforLearning/django-workshop-winter-2024)
+
 ### Setups
 
 There's a folder called `cfc-devenv-base` that defines the base image for development environment. We prebuild this image in the CI (github actions), the reason why we do this is so that the developer environment just gets downloaded rather than built in the developer machine.
