@@ -19,10 +19,10 @@
       // We specify the version because the default behaviour is to use version of host machine which is meh
       "version": "3.12"
     },
-    "ghcr.io/devcontainers-contrib/features/poetry:2": {},
-    "ghcr.io/devcontainers-contrib/features/vscode-cli:1": {},
-    "ghcr.io/devcontainers-contrib/features/vscode-server:1": {},
-    "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+    "ghcr.io/devcontainers-extra/features/uv:1": {},
+    "ghcr.io/devcontainers-extra/features/vscode-cli:1": {},
+    "ghcr.io/devcontainers-extra/features/vscode-server:1": {},
+    "ghcr.io/devcontainers-extra/features/zsh-plugins:0": {
       "plugins": "git docker zsh-autosuggestions zsh-syntax-highlighting zsh-you-should-use zsh-bat",
       "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions https://github.com/zsh-users/zsh-syntax-highlighting https://github.com/MichaelAquilina/zsh-you-should-use.git https://github.com/fdellwing/zsh-bat.git"
     },
