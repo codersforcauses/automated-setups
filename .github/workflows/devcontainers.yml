@@ -2,14 +2,14 @@ name: "Devcontainer CI/CD"
 
 on:
   push:
-    branches: ["main", "FEAT/*", "use_uv"]
+    branches: ["main", "FEAT/*"]
     paths:
       - cfc-devenv-base/**
       - .github/workflows/devcontainers.yml
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: samjjacko/cfc-devenv-uv
+  IMAGE_NAME: codersforcauses/cfc-devenv-uv
 
 jobs:
   # Build and push Docker image with Buildx (don't push on PR)
