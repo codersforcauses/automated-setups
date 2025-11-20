@@ -2,7 +2,7 @@ name: "Devcontainer CI/CD"
 
 on:
   push:
-    branches: ["main", "FEAT/*", "use_uv"]
+    branches: ["main", "FEAT/*"]
     paths:
       - cfc-devenv-base/**
       - .github/workflows/devcontainers.yml
