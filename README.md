@@ -18,7 +18,7 @@ We are able to automate the setup of tooling. By default these are what we insta
 - Git
 - Github CLI
 - Node (npm, yarn, nvm, pnpm, typescript)
-- Python (black, poetry)
+- Python (black, poetry, uv)
 - Sane Vscode extensions
 - Vscode CLI + Server
 - Zsh Plugins

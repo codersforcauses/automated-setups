@@ -1,4 +1,4 @@
-# Sampling a dependency installed in poetry
+# Sampling a dependency installed in uv
 # making sure python detects the dependency for intellicode
 import sqlparse
 
